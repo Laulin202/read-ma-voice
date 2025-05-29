@@ -1,0 +1,16 @@
+ion-content {
+    --background: #ffffff;
+
+    
+}
+
+.loader-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        ion-spinner.custom-spinner{
+            color: #99259d;
+        }
+    }

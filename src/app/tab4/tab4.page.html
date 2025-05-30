@@ -1,13 +1,58 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>tab4</ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-padding-start">Perfil</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <div class="registro-section">
+    <h2>Registro</h2>
+    <div class="registro-icons">
+      <div class="registro-item">
+        <div class="icon-circle">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <div class="registro-label">Tiempo leído</div>
+        <div class="registro-value">0 min</div>
+      </div>
+      <div class="registro-item">
+        <div class="icon-circle">
+          <ion-icon name="book-outline"></ion-icon>
+        </div>
+        <div class="registro-label">Cuentos leídos</div>
+        <div class="registro-value">0</div>
+      </div>
+      <div class="registro-item">
+        <div class="icon-circle">
+          <ion-icon name="flame-outline"></ion-icon>
+        </div>
+        <div class="registro-label">Días de Racha</div>
+        <div class="registro-value">0</div>
+      </div>
+    </div>
+  </div>
+
+  <ion-list lines="none">
+    <ion-item button>
+      <ion-label>Mis voces</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Idioma de la Aplicación</ion-label>
+      <ion-note slot="end">Español</ion-note>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Idioma de los Cuentos</ion-label>
+      <ion-note slot="end">Español</ion-note>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Política de Privacidad</ion-label>
+      <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+    </ion-item>
+    <ion-item button>
+      <ion-label>Cerrar Sesión</ion-label>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

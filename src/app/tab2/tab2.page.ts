@@ -7,6 +7,20 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab2Page {
+  slideOpts = {
+    slidesPerView: 2,      
+    spaceBetween: 30,      
+    freeMode: false,
+    grabCursor: true,
+    centeredSlides: false,
+    loop: false,
+    autoplay: false,
+    slidesPerGroup: 2,     
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  };
 
   constructor() {}
 

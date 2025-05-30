@@ -1,0 +1,104 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-padding-start">
+      Descubre
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="search-container">
+    <ion-searchbar placeholder="Buscar por título" class="custom-searchbar"></ion-searchbar>
+  </div>
+
+  <div class="main-heading">
+    Categorías
+  </div>
+
+  <ion-list-header>
+    <ion-label>Clásicos</ion-label>
+  </ion-list-header>
+
+  <swiper-container [options]="slideOpts" class="book-slides">
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg" alt="Caperucita Roja"/>
+        <ion-card-header>
+          <ion-card-title>Caperucita Roja</ion-card-title>
+          <ion-card-subtitle>Cuento clásico infantil</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/2086361/pexels-photo-2086361.jpeg" alt="El patito feo"/>
+        <ion-card-header>
+          <ion-card-title>El patito feo</ion-card-title>
+          <ion-card-subtitle>Historia de superación</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg" alt="Los tres cochinitos"/>
+        <ion-card-header>
+          <ion-card-title>Los tres cochinitos</ion-card-title>
+          <ion-card-subtitle>Aventura y perseverancia</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg" alt="Cenicienta"/>
+        <ion-card-header>
+          <ion-card-title>Cenicienta</ion-card-title>
+          <ion-card-subtitle>Cuento de hadas</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+  <ion-list-header>
+    <ion-label>Fábulas</ion-label>
+  </ion-list-header>
+
+  <swiper-container [options]="slideOpts" class="book-slides">
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg" alt="Rapunzel"/>
+        <ion-card-header>
+          <ion-card-title>Rapunzel</ion-card-title>
+          <ion-card-subtitle>Torre y cabello mágico</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/3662844/pexels-photo-3662844.jpeg" alt="Pinocho"/>
+        <ion-card-header>
+          <ion-card-title>Pinocho</ion-card-title>
+          <ion-card-subtitle>El títere que quería ser real</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/2465877/pexels-photo-2465877.jpeg" alt="Blancanieves"/>
+        <ion-card-header>
+          <ion-card-title>Blancanieves</ion-card-title>
+          <ion-card-subtitle>Los siete enanitos</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <img src="https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg" alt="Hansel y Gretel"/>
+        <ion-card-header>
+          <ion-card-title>Hansel y Gretel</ion-card-title>
+          <ion-card-subtitle>Casa de dulces</ion-card-subtitle>
+        </ion-card-header>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
+
+</ion-content>

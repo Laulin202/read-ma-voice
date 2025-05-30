@@ -1,0 +1,106 @@
+.perfil-content {
+  background-color: #fff;
+
+  .registro-section {
+    padding: 16px;
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .registro-items {
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+
+      .registro-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px;
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 6px;
+        }
+
+        .valor {
+          font-weight: bold;
+          margin: 0;
+        }
+
+        .label {
+          font-size: 0.8rem;
+          color: #666;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .opciones-list {
+    padding: 0 12px;
+
+    ion-item {
+      border-radius: 12px;
+      margin-bottom: 12px;
+      --background: #f7f7f7;
+      --padding-start: 16px;
+      --inner-padding-end: 16px;
+    }
+
+    .cerrar-sesion {
+      --background: #f7f7f7;
+    }
+  }
+}
+
+.registro-section {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.registro-section h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.registro-icons {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.registro-item {
+  flex: 1;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 8px;
+  font-size: 28px;
+  color: #9b4dff;
+}
+
+.registro-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.registro-value {
+  font-size: 13px;
+  color: gray;
+}

@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <div id="header">
+    <div id="app-bar">
+      <ion-icon name="arrow-back"></ion-icon>
+    </div>
+
+    <div id="logo">
+      <img src="assets/LogoWelcome.png" alt="logo">
+    </div>
+  </div>
+
+  <ion-card class="ion-padding">
+    <ion-card-content>
+      <h1>Graba tu voz y cuenta miles de cuentos con Reedma voice</h1>
+      <p>Nuestra app te permitira grabar con una ia, tu voz para que seas tu el narrador de maravillosas historias
+        infantiles</p>
+
+      <ion-button expand="block" (click)="goToLogin()" class=" btn-primary ion-margin-bottom">Ingresar</ion-button>
+      <ion-button expand="block" (click)="goToRegister()" fill="outline" class="btn-outline">Registrarse</ion-button>
+
+      <div class="line-text">
+        <span class="lines"></span>
+        <span class="text">O ingresa usando</span>
+      </div>
+
+      <div class="socials">
+        <ion-button class="btn-fb">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </ion-button>
+        <ion-button class="btn-go">
+          <ion-icon name="logo-google"></ion-icon>
+        </ion-button>
+        <ion-button class="btn-ph">
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

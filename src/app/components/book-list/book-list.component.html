@@ -1,0 +1,20 @@
+<div class="book-list-container" [class.grid-layout]="showAsGrid">
+  <div class="book-item" *ngFor="let book of books; trackBy: trackByFn">
+    <app-book-card 
+      [id]="book.id"
+      [imageSrc]="book.imageSrc"
+      [title]="book.title" 
+      [icon]="book.icon"
+      [age]="book.age" 
+      [theme]="book.theme"
+      [description]="book.description">
+    </app-book-card>
+  </div>
+  
+  <!-- Mensaje cuando no hay resultados -->
+  <div class="no-results" *ngIf="books.length === 0">
+    <ion-icon name="search-outline" size="large"></ion-icon>
+    <h3>No se encontraron cuentos</h3>
+    <p>Intenta con otros términos de búsqueda</p>
+  </div>
+</div>

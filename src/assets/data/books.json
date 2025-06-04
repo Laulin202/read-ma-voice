@@ -1,0 +1,54 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "imageSrc": "https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Cuentos_Infantiles/cuentos_clasicos/thumbnails/caperucita_thumb300.jpg",
+      "title": "Caperucita Roja",
+      "icon": "logo-ionic",
+      "age": "+4 años",
+      "theme": "Clásicos",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "category": "Clásicos"
+    },
+    {
+      "id": 2,
+      "imageSrc": "https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Cuentos_Infantiles/cuentos_clasicos/thumbnails/3cerditos_thumb300.jpg",
+      "title": "Los Tres Cerditos",
+      "icon": "logo-ionic",
+      "age": "+3 años",
+      "theme": "Clásicos",
+      "description": "La historia de tres cerditos y el lobo feroz.",
+      "category": "Clásicos"
+    },
+    {
+      "id": 3,
+      "imageSrc": "https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Cuentos_Infantiles/cuentos_clasicos/thumbnails/blancanieves_thumb300.jpg",
+      "title": "Blancanieves",
+      "icon": "logo-ionic",
+      "age": "+4 años",
+      "theme": "Clásicos",
+      "description": "La princesa más bella del reino.",
+      "category": "Clásicos"
+    },
+    {
+      "id": 4,
+      "imageSrc": "https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Cuentos_Infantiles/cuentos_clasicos/thumbnails/patitofeo_thumb300.jpg",
+      "title": "El Patito Feo",
+      "icon": "logo-ionic",
+      "age": "+3 años",
+      "theme": "Aventura",
+      "description": "Un patito diferente encuentra su lugar.",
+      "category": "Aventura"
+    },
+    {
+      "id": 5,
+      "imageSrc": "https://arbolabc.nyc3.cdn.digitaloceanspaces.com/Cuentos_Infantiles/cuentos_clasicos/thumbnails/PinocchioThumbnail.png",
+      "title": "Pinocho",
+      "icon": "logo-ionic",
+      "age": "+3 años",
+      "theme": "Clásicos",
+      "description": "Pinocho quiere ser un niño de verdad.",
+      "category": "Clásicos"
+    }
+  ]
+}

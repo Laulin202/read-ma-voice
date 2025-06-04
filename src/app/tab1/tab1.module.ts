@@ -5,6 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
+import { BookCardComponent } from '../components/book-card/book-card.component';
+import { BookListComponent } from '../components/book-list/book-list.component';
+
+
 import { Tab1PageRoutingModule } from './tab1-routing.module';
 
 @NgModule({
@@ -13,7 +17,8 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    BookCardComponent,
   ],
   declarations: [Tab1Page],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

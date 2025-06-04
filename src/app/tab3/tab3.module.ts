@@ -15,7 +15,7 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
     ExploreContainerComponentModule,
     Tab3PageRoutingModule
   ],
-  declarations: [Tab3Page],
+  declarations: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Tab3PageModule {}

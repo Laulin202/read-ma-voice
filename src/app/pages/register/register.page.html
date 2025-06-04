@@ -1,18 +1,22 @@
 <ion-content [fullscreen]="true">
-  <div id="header">
-    <div id="app-bar">
-      <ion-icon name="arrow-back"></ion-icon>
-      <div id="logo">
-        <img src="assets/libro_logo.png" alt="" />
+  <div id="header_1">
+    <div id="header">
+      <div id="app-bar">
+        <ion-toolbar>
+          <ion-buttons>
+            <ion-back-button icon="arrow-back" text="" defaultHref="/welcome"></ion-back-button>
+          </ion-buttons>
+        </ion-toolbar>
       </div>
-      <div></div>
+      <h1>Registrarse</h1>
+      <p>Registrate para <br />comenzar a descubrir</p>
     </div>
-
-    <h1>Registrarse</h1>
-    <p>Crea una cuenta <br />para empezar la aventura</p>
+    <div id="logo">
+      <img src="assets/logolibro.png" alt="" />
+    </div>
   </div>
 
-  <div class= "wrapper">
+  <div class="wrapper">
     <ion-card class="form-wrapper">
       <ion-card-content>
         <ion-item>
@@ -24,10 +28,10 @@
           <ion-input type="email" placeholder="email@example.com"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon  name="lock-closed"></ion-icon>
+          <ion-icon name="lock-closed"></ion-icon>
           <ion-input id="password" type="password" placeholder="Contraseña"></ion-input>
         </ion-item>
-        <ion-button expand="block" >Registrarse </ion-button>
+        <ion-button expand="block" (click)="goToHome()">Registrarse </ion-button>
       </ion-card-content>
     </ion-card>
 

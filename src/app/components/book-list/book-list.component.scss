@@ -1,0 +1,40 @@
+.book-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .book-item {
+    width: 100%;
+  }
+
+  .no-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--ion-color-medium);
+
+    ion-icon {
+      margin-bottom: 16px;
+      color: var(--ion-color-light);
+    }
+
+    h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+  }
+}

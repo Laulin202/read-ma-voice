@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -13,9 +15,13 @@ import { IonicModule } from '@ionic/angular';
 })
 export class RegisterPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToHome(){
+    this.router.navigate(['/tabs']);
   }
 
 }

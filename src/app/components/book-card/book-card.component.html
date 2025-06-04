@@ -1,0 +1,21 @@
+<ion-card (click)="goToBookDetail()">
+  <img [src]="imageSrc" [alt]="title" />
+  <ion-card-header>
+    <div class="cardTitle">
+      <ion-card-title>{{ title }}</ion-card-title>
+      <ion-icon name="download-outline"></ion-icon>
+    </div>
+    <div class="cardgenre">
+      <div class="age" [ngStyle]="{'background-color': getAgeColor()}">{{ age }}</div>
+      <div class="theme">{{ theme }}</div>
+    </div>
+    <div class="cardcontent">
+      <p>{{ description }}</p>
+      <div class="bookpages">
+        <ion-icon name="book-outline"></ion-icon>
+        <h2>2/10</h2>
+      </div>
+      
+    </div>
+  </ion-card-header>
+</ion-card>

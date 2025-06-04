@@ -1,10 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
+import { BookCardComponent } from '../components/book-card/book-card.component';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss'],
-  standalone: false,
+  standalone: true,
+  imports: [IonicModule, CommonModule, FormsModule, BookCardComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Tab3Page {
   slideOpts = {
@@ -26,45 +33,30 @@ export class Tab3Page {
 
   cuentos = [
     {
-      titulo: 'Caperucita Roja',
-      descripcion: 'Cuento clásico infantil',
-      img: 'https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg'
+      title: 'Caperucita Roja',
+      description: 'Cuento clásico infantil',
+      imageSrc: 'https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg',
+      icon: 'logo-ionic',
+      age: '+4 años',
+      theme: 'Clásicos'
     },
     {
-      titulo: 'El patito feo',
-      descripcion: 'Historia de superación',
-      img: 'https://images.pexels.com/photos/2086361/pexels-photo-2086361.jpeg'
+      title: 'El patito feo',
+      description: 'Historia de superación',
+      imageSrc: 'https://images.pexels.com/photos/2086361/pexels-photo-2086361.jpeg',
+      icon: 'logo-ionic',
+      age: '+3 años',
+      theme: 'Fábulas'
     },
     {
-      titulo: 'Los tres cochinitos',
-      descripcion: 'Aventura y perseverancia',
-      img: 'https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg'
+      title: 'Los tres cochinitos',
+      description: 'Aventura y perseverancia',
+      imageSrc: 'https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg',
+      icon: 'logo-ionic',
+      age: '+3 años',
+      theme: 'Clásicos'
     },
-    {
-      titulo: 'Cenicienta',
-      descripcion: 'Cuento de hadas',
-      img: 'https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg'
-    },
-    {
-      titulo: 'Rapunzel',
-      descripcion: 'Torre y cabello mágico',
-      img: 'https://images.pexels.com/photos/3662845/pexels-photo-3662845.jpeg'
-    },
-    {
-      titulo: 'Pinocho',
-      descripcion: 'El títere que quería ser real',
-      img: 'https://images.pexels.com/photos/3662844/pexels-photo-3662844.jpeg'
-    },
-    {
-      titulo: 'Blancanieves',
-      descripcion: 'Los siete enanitos',
-      img: 'https://images.pexels.com/photos/2465877/pexels-photo-2465877.jpeg'
-    },
-    {
-      titulo: 'Hansel y Gretel',
-      descripcion: 'Casa de dulces',
-      img: 'https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg'
-    }
+    // ...agrega el resto de cuentos igual
   ];
 
 }

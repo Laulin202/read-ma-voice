@@ -1,106 +1,128 @@
-.perfil-content {
-  background-color: #fff;
+ion-content {
+  --background: #ffffff; // o el color claro que prefieras
+}
 
-  .registro-section {
-    padding: 16px;
+ion-toolbar {
 
-    h2 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin-bottom: 12px;
-    }
+  --padding-start: 0;
+  --padding-end: 0;
+  width: 100%;
+  --min-height: 80px;
 
-    .registro-items {
-      display: flex;
-      justify-content: space-between;
-      text-align: center;
+  ion-title {
+    width: auto;
+    font-size: 30px;
+    padding: 0 20px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
 
-      .registro-item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 8px;
 
-        img {
-          width: 40px;
-          height: 40px;
-          margin-bottom: 6px;
-        }
-
-        .valor {
-          font-weight: bold;
-          margin: 0;
-        }
-
-        .label {
-          font-size: 0.8rem;
-          color: #666;
-          margin: 0;
-        }
-      }
-    }
-  }
-
-  .opciones-list {
-    padding: 0 12px;
-
-    ion-item {
-      border-radius: 12px;
-      margin-bottom: 12px;
-      --background: #f7f7f7;
-      --padding-start: 16px;
-      --inner-padding-end: 16px;
-    }
-
-    .cerrar-sesion {
-      --background: #f7f7f7;
-    }
   }
 }
 
+
 .registro-section {
-  background: white;
+
+  background: transparent;
   padding: 16px;
   border-radius: 16px;
   margin-bottom: 20px;
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #7A1FA0;
+  }
+
+  .registro-icons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    .registro-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+
+      .icon-circle {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: #f2f2f2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 8px;
+        font-size: 28px;
+        color: #9b4dff;
+        border: 2px solid rgb(135, 29, 158);
+      }
+
+      .registro-label {
+          font-size: 0.8rem;
+          font-weight: bold;
+          color: #484848;
+          margin: 0;
+      }
+
+      .registro-value {
+          color: #868686;
+          margin: 0;
+      }
+    }
+  }
 }
 
-.registro-section h2 {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 16px;
+.opciones-list {
+  padding: 0 12px;
+
+  ion-item {
+    border-radius: 12px;
+    margin-bottom: 12px;
+    --background: #f7f7f7;
+    --padding-start: 16px;
+    --inner-padding-end: 16px;
+  }
+
+  .cerrar-sesion {
+    --background: #f7f7f7;
+  }
 }
 
-.registro-icons {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-}
 
-.registro-item {
-  flex: 1;
-}
 
-.icon-circle {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 8px;
-  font-size: 28px;
-  color: #9b4dff;
-}
 
-.registro-label {
-  font-size: 14px;
-  font-weight: 500;
-}
 
-.registro-value {
-  font-size: 13px;
-  color: gray;
+ion-list {
+  background: transparent;
+
+  ion-item {
+    --background: #f2f2f2;
+    /* Color gris */
+    --border-radius: 12px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --min-height: 56px;
+    margin-bottom: 10px;
+    /* Espacio entre ítems */
+    color: #000;
+    /* Texto negro */
+
+    ion-label,
+    ion-note {
+      color: #363636 !important;
+      font-weight: bold;
+    }
+
+    ion-icon {
+      color: #000 !important;
+    }
+  }
 }

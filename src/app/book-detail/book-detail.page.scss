@@ -1,0 +1,72 @@
+ion-content {
+    background: #ffffff;
+}
+
+.book-info-section {
+    background: #59a0a0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+
+    h1.book-title {
+        color: #ffffff;
+        font-weight: bold;
+    }
+
+    .book-meta {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        span {
+            margin: 10px;
+            background: #4ced5f;
+            border-radius: 20px;
+            padding: 5px 8px;
+        }
+
+        .age-badge {
+            margin: 10px;
+            border-radius: 20px;
+            padding: 5px 8px;
+        }
+
+    }
+
+    .action-buttons {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 380px;
+
+        .read-button {
+            font-size: 20px;
+            color: #eaeaea;
+            --border-radius: 60px;
+            text-transform: none
+        }
+
+        .narrator-button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            --background: #db1d1d;
+            --border-radius: 20px;
+            text-transform: none;
+            
+            
+            width: 90%;
+
+            .btn-text {
+                font-size: 10px;
+            }
+
+            .btn-narrator {
+                font-size: 10px;
+            }
+        }
+
+    }
+}

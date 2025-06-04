@@ -1,18 +1,22 @@
 <ion-content [fullscreen]="true">
-  <div id="header">
-    <div id="app-bar">
-      <ion-icon name="arrow-back"></ion-icon>
-      <div id="logo">
-        <img src="assets/libro_logo.png" alt="" />
+  <div id="header_1">
+    <div id="header">
+      <div id="app-bar">
+        <ion-toolbar>
+          <ion-buttons>
+            <ion-back-button icon="arrow-back" text="" defaultHref="/welcome"></ion-back-button>
+          </ion-buttons>
+        </ion-toolbar>
       </div>
-      <div></div>
+      <h1>Ingresar</h1>
+      <p>Ingresa a tu cuenta para <br />descubrir multiples historias</p>
     </div>
-
-    <h1>Ingresar</h1>
-    <p>Ingresa a tu cuenta para <br />descubrir multiples historias</p>
+    <div id="logo">
+      <img src="assets/logomama.png" alt="" />
+    </div>
   </div>
 
-  <div class= "wrapper">
+  <div class="wrapper">
     <ion-card class="form-wrapper">
       <ion-card-content>
         <ion-item>
@@ -20,10 +24,10 @@
           <ion-input type="email" placeholder="Ingresa tu email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon  name="lock-closed"></ion-icon>
+          <ion-icon name="lock-closed"></ion-icon>
           <ion-input id="password" type="password" placeholder="Ingresa tu contraseña"></ion-input>
         </ion-item>
-        <ion-button expand="block" >Ingresar </ion-button>
+        <ion-button (click)="goToHome()" expand="block">Ingresar </ion-button>
       </ion-card-content>
     </ion-card>
 

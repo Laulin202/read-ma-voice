@@ -3,16 +3,16 @@
     <div id="header">
       <div id="app-bar">
         <ion-toolbar>
-          <ion-buttons>
+          <ion-buttons slot="start">
             <ion-back-button icon="arrow-back" text="" defaultHref="/welcome"></ion-back-button>
           </ion-buttons>
         </ion-toolbar>
       </div>
       <h1>Registrarse</h1>
-      <p>Registrate para <br />comenzar a descubrir</p>
+      <p>Regístrate para comenzar a descubrir</p>
     </div>
     <div id="logo">
-      <img src="assets/logolibro.png" alt="" />
+      <img src="assets/logolibro.png" alt="Logo" />
     </div>
   </div>
 
@@ -20,36 +20,36 @@
     <ion-card class="form-wrapper">
       <ion-card-content>
         <ion-item>
-          <ion-icon id="name" name="person"></ion-icon>
-          <ion-input type="text" placeholder="Nombre"></ion-input>
+          <ion-icon slot="start" name="person"></ion-icon>
+          <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon id="email" name="mail"></ion-icon>
-          <ion-input type="email" placeholder="email@example.com"></ion-input>
+          <ion-icon slot="start" name="mail"></ion-icon>
+          <ion-input type="email" placeholder="email@example.com" [(ngModel)]="email"></ion-input>
         </ion-item>
         <ion-item>
-          <ion-icon name="lock-closed"></ion-icon>
-          <ion-input id="password" type="password" placeholder="Contraseña"></ion-input>
+          <ion-icon slot="start" name="lock-closed"></ion-icon>
+          <ion-input type="password" placeholder="Contraseña" [(ngModel)]="password"></ion-input>
         </ion-item>
-        <ion-button expand="block" (click)="goToHome()">Registrarse </ion-button>
+        <ion-button expand="block" (click)="registrar()">Registrarse</ion-button>
       </ion-card-content>
     </ion-card>
 
     <div class="line-text">
       <span class="lines"></span>
-      <span class="text"> O ingresa usando</span>
+      <span class="text">O ingresa usando</span>
     </div>
 
     <ion-card class="social-wrapper">
       <ion-card-content>
         <div class="socials">
-          <ion-button class="btn-fb">
+          <ion-button class="btn-fb" aria-label="Ingresar con Facebook">
             <ion-icon name="logo-facebook"></ion-icon>
           </ion-button>
-          <ion-button class="btn-go">
+          <ion-button class="btn-go" aria-label="Ingresar con Google">
             <ion-icon name="logo-google"></ion-icon>
           </ion-button>
-          <ion-button class="btn-ph">
+          <ion-button class="btn-ph" aria-label="Ingresar con teléfono">
             <ion-icon name="call-outline"></ion-icon>
           </ion-button>
         </div>

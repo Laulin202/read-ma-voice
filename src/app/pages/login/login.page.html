@@ -21,13 +21,13 @@
       <ion-card-content>
         <ion-item>
           <ion-icon id="email" name="mail"></ion-icon>
-          <ion-input type="email" placeholder="Ingresa tu email"></ion-input>
+          <ion-input type="email" placeholder="Ingresa tu email" [(ngModel)]="email" required></ion-input>
         </ion-item>
         <ion-item>
           <ion-icon name="lock-closed"></ion-icon>
-          <ion-input id="password" type="password" placeholder="Ingresa tu contraseña"></ion-input>
+          <ion-input type="password" placeholder="Ingresa tu contraseña" [(ngModel)]="password" required></ion-input>
         </ion-item>
-        <ion-button (click)="goToHome()" expand="block">Ingresar </ion-button>
+        <ion-button (click)="login()" expand="block" [disabled]="loading">Ingresar</ion-button>
       </ion-card-content>
     </ion-card>
 

@@ -7,7 +7,7 @@
       "icon": "logo-ionic",
       "age": "+4 años",
       "theme": "Clásicos",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+      "description": "La inolvidable historia de una niña de capa roja que, mientras lleva provisiones a su abuelita enferma, se enfrenta al astuto lobo en el bosque. Un cuento lleno de valentía, ingenio y una lección sobre la importancia de la precaución.",
       "category": "Clásicos",
       "pages": [
         {
@@ -89,7 +89,7 @@
       "icon": "logo-ionic",
       "age": "+3 años",
       "theme": "Clásicos",
-      "description": "La historia de tres cerditos y el lobo feroz.",
+      "description": "Tres hermanos cerditos construyen sus casas para protegerse del feroz lobo que ronda el bosque. Cada uno elige materiales diferentes y aprenderán que la fortaleza y la previsión son claves para enfrentar el peligro.",
       "category": "Clásicos",
       "pages": []
     },
@@ -100,7 +100,7 @@
       "icon": "logo-ionic",
       "age": "+4 años",
       "theme": "Clásicos",
-      "description": "La princesa más bella del reino.",
+      "description": "Una princesa de inigualable belleza que, perseguida por los celos de su madrastra, encuentra refugio con siete enanitos. Un cuento sobre la envidia, la bondad y la esperanza.",
       "category": "Clásicos",
       "pages": []
     },
@@ -111,7 +111,7 @@
       "icon": "logo-ionic",
       "age": "+3 años",
       "theme": "Aventura",
-      "description": "Un patito diferente encuentra su lugar.",
+      "description": "Rechazado por su apariencia, un patito solitario busca su lugar en el mundo. Descubre que la verdadera belleza se revela con el tiempo y que ser diferente es motivo de orgullo.",
       "category": "Aventura",
       "pages": []
     },
@@ -122,7 +122,7 @@
       "icon": "logo-ionic",
       "age": "+3 años",
       "theme": "Clásicos",
-      "description": "Pinocho quiere ser un niño de verdad.",
+      "description": "Un muñeco de madera que sueña con convertirse en un niño de verdad. A través de aventuras y lecciones de vida, Pinocho aprenderá sobre la sinceridad, la obediencia y el valor de ser honesto.",
       "category": "Clásicos",
       "pages": []
     }

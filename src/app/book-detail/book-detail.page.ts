@@ -80,6 +80,15 @@ export class BookDetailPage implements OnInit {
     this.router.navigate(['/tabs/tab1']); // o la ruta que corresponda
   }
 
+  // Nuevo método para navegar al reader
+  goToReader(): void {
+    if (this.bookId) {
+      this.router.navigate(['/read-book', this.bookId]);
+    } else {
+      console.error('No se puede navegar al reader: ID del libro no disponible');
+    }
+  }
+
   // Método para manejar el caso de libro no encontrado
   onBookNotFound(): void {
     console.log('Libro no encontrado');

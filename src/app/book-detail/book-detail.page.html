@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button icon="arrow-back" text="" (click)="goBack()" ></ion-back-button>
+      <ion-back-button icon="arrow-back" text="" (click)="goBack()"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -15,12 +15,12 @@
 
   <!-- Book detail content -->
   <div *ngIf="!isLoading && (book$ | async) as book" class="book-detail-container">
-    
+
     <!-- Hero section with image -->
     <div class="hero-section">
       <div class="book-image-container">
         <img [src]="book.imageSrc" [alt]="book.title" class="book-cover">
-        
+
       </div>
     </div>
 
@@ -34,25 +34,28 @@
         </div>
       </div>
 
-      
+
 
       <!-- Action buttons -->
       <div class="action-buttons">
-        <ion-button  class="read-button">
+        <ion-button class="read-button">
           <ion-icon name="book-outline" slot="start"></ion-icon>
-          Leer
+          <p>Leer</p>
         </ion-button>
-        
-        <ion-button  class="narrator-button">
-          <ion-icon name="heart-outline"></ion-icon>
-          <h1 class="btn-text">Narrador</h1>
-          <h2 class="btn-narrator">Mamá</h2>
-          <ion-icon name="heart-outline"></ion-icon>
+
+        <ion-button class="narrator-button">
+          <div class="left-content">
+            <ion-icon name="barcode-outline"></ion-icon>
+            <h1 class="btn-text">Narrador</h1>
+          </div>
+          <div class="right-content">
+            <h2 class="btn-narrator">Mamá</h2>
+            <ion-icon name="chevron-forward-outline"></ion-icon>
+          </div>
         </ion-button>
       </div>
 
       <div class="description-section">
-        <h3>Descripción</h3>
         <p class="book-description">{{ book.description }}</p>
       </div>
     </div>

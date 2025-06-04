@@ -1,29 +1,91 @@
-<ion-content fullscreen class="horizontal-layout">
-  <ion-button 
-    (click)="prevPage()" 
-    [disabled]="currentPageIndex === 0" 
-    class="side-button rotated-button">
-    Anterior
-  </ion-button>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ currentPage ? 'Página ' + (currentPageIndex + 1) + ' de ' + pages.length : 'Cargando...' }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="toggleOrientation()" *ngIf="platform.is('capacitor')">
+        <ion-icon name="phone-portrait-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
 
-  <div *ngIf="currentPage; else noPages" class="page-container">
-    <div class="rotated-content">
-      <img [src]="currentPage.imageUrl" alt="Imagen página" class="page-image" />
-      <div class="page-text">
-        <h2>Página {{ currentPageIndex + 1 }} de {{ pages.length }}</h2>
-        <p>{{ currentPage.text }}</p>
-      </div>
-    </div>
+<ion-content fullscreen class="reader-content">
+  <!-- Loading state -->
+  <div *ngIf="pages.length === 0" class="loading-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <p>Cargando páginas...</p>
   </div>
 
-  <ion-button 
-    (click)="nextPage()" 
-    [disabled]="currentPageIndex === pages.length - 1" 
-    class="side-button rotated-button">
-    Siguiente
-  </ion-button>
+  <!-- Reader layout -->
+  <div *ngIf="currentPage; else noPages" class="reader-layout">
+    
+    <!-- Navigation button - Previous -->
+    <ion-button 
+      (click)="prevPage()" 
+      [disabled]="currentPageIndex === 0" 
+      class="nav-button nav-button-left"
+      fill="clear"
+      size="large">
+      <ion-icon name="chevron-back" size="large"></ion-icon>
+    </ion-button>
 
+    <!-- Main content area -->
+    <div class="page-container">
+      <div class="page-content">
+        <!-- Image section -->
+        <div class="image-section">
+          <img 
+            [src]="currentPage.imageUrl" 
+            [alt]="'Página ' + (currentPageIndex + 1)" 
+            class="page-image" 
+            (error)="onImageError($event)" />
+        </div>
+        
+        <!-- Text section -->
+        <div class="text-section">
+          <div class="text-content">
+            <p class="page-text">{{ currentPage.text }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Progress indicator -->
+      <div class="progress-container">
+        <ion-progress-bar 
+          [value]="(currentPageIndex + 1) / pages.length"
+          color="primary">
+        </ion-progress-bar>
+        <div class="page-indicator">
+          <span class="page-counter">{{ currentPageIndex + 1 }} / {{ pages.length }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation button - Next -->
+    <ion-button 
+      (click)="nextPage()" 
+      [disabled]="currentPageIndex === pages.length - 1" 
+      class="nav-button nav-button-right"
+      fill="clear"
+      size="large">
+      <ion-icon name="chevron-forward" size="large"></ion-icon>
+    </ion-button>
+
+  </div>
+
+  <!-- No pages template -->
   <ng-template #noPages>
-    <p>No hay páginas para mostrar.</p>
+    <div class="no-pages-container">
+      <ion-icon name="book-outline" size="large" color="medium"></ion-icon>
+      <h2>No hay páginas disponibles</h2>
+      <p>Este cuento no tiene páginas para mostrar.</p>
+      <ion-button routerLink="/tabs/tab1" color="primary">
+        <ion-icon name="home" slot="start"></ion-icon>
+        Volver al inicio
+      </ion-button>
+    </div>
   </ng-template>
 </ion-content>

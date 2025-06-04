@@ -20,7 +20,7 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     Tab1PageRoutingModule,
     BookCardComponent,
   ],
-  declarations: [Tab1Page],
+  declarations: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class Tab1PageModule {}

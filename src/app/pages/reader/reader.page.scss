@@ -1,0 +1,173 @@
+.horizontal-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  background: #000;
+}
+
+.side-button {
+  height: 50px;
+  width: 100px;
+  flex-shrink: 0;
+  --background: linear-gradient(135deg, var(--ion-color-primary), var(--ion-color-primary-shade));
+  --color: white;
+  --border-radius: 8px;
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  z-index: 10;
+  margin: 0 5px;
+}
+
+.side-button:hover:not([disabled]) {
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: rotate(90deg) scale(1.05);
+}
+
+.side-button[disabled] {
+  --background: #666;
+  --color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.rotated-button {
+  transform: rotate(90deg);
+  transform-origin: center center;
+}
+
+.page-container {
+  flex: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* El truco aquí es usar las dimensiones correctas para la rotación */
+.rotated-content {
+  position: relative;
+  /* Intercambiamos width y height porque está rotado 90 grados */
+  width: 100vh;        /* Usa la altura del viewport como ancho */
+  height: calc(100vw - 220px); /* Usa el ancho del viewport menos espacio de botones como altura */
+  transform: rotate(90deg);
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  background: #fff;
+}
+
+.page-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+.page-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 12px 20px;
+  border-radius: 8px;
+  max-width: 80%;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.3;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.page-text h2 {
+  margin: 0 0 6px 0;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.page-text p {
+  margin: 0;
+  color: #f5f5f5;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .side-button {
+    width: 80px;
+    height: 40px;
+    font-size: 0.8em;
+    margin: 0 3px;
+  }
+  
+  .rotated-content {
+    height: calc(100vw - 180px);
+  }
+  
+  .page-text {
+    padding: 10px 16px;
+    font-size: 0.9em;
+    bottom: 10px;
+  }
+  
+  .page-text h2 {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .side-button {
+    width: 70px;
+    height: 35px;
+    font-size: 0.7em;
+    margin: 0 2px;
+  }
+  
+  .rotated-content {
+    height: calc(100vw - 150px);
+  }
+  
+  .page-text {
+    padding: 8px 12px;
+    font-size: 0.8em;
+    bottom: 8px;
+  }
+}
+
+/* Animaciones suaves */
+.rotated-content,
+.page-image {
+  transition: all 0.3s ease;
+}

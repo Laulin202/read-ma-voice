@@ -13,7 +13,8 @@ const routes: Routes = [
   {
     path: 'loader',
     loadChildren: () => import('./pages/loader/loader.module').then( m => m.LoaderPageModule)
-  },  {
+  },
+  {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
@@ -32,7 +33,7 @@ const routes: Routes = [
   {
     path: 'book-detail',
     loadChildren: () => import('./book-detail/book-detail.module').then( m => m.BookDetailPageModule)
-  }
+  },
 
 
 ];

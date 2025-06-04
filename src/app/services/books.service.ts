@@ -3,6 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { map, catchError, tap } from 'rxjs/operators';
 
+export interface Page {
+  id: number;
+  text: string;
+  imageUrl: string;
+}
+
 
 export interface Book {
   id: number;
@@ -13,6 +19,7 @@ export interface Book {
   theme: string;
   description: string;
   category: string;
+  pages: Page[];
 }
 
 interface BooksData {
@@ -37,23 +44,24 @@ export class BooksService {
     this.loadBooksFromJson();
   }
 
-  private loadBooksFromJson(): void {
-    this.http.get<BooksData>('assets/data/books.json')
-      .pipe(
-        map(data => data.books),
-        catchError(error => {
-          console.error('Error loading books from JSON:', error);
-          // En caso de error, devolver un array vacío
-          return of([]);
-        }),
-        tap(books => {
-          this.books = books;
-          this.filteredBooksSubject.next(books);
-          this.booksLoadedSubject.next(true);
-        })
-      )
-      .subscribe();
-  }
+private loadBooksFromJson(): void {
+  this.http.get<BooksData>('assets/data/books.json')
+    .pipe(
+      map(data => data.books),
+      tap(books => {
+        console.log('Libros cargados con pages:', JSON.parse(JSON.stringify(books))); 
+        this.books = books;
+        this.filteredBooksSubject.next(books);
+        this.booksLoadedSubject.next(true);
+      }),
+      catchError(error => {
+        console.error('Error loading books:', error);
+        return of([]);
+      })
+    )
+    .subscribe();
+}
+
 
   // Método para recargar los datos si es necesario
   reloadBooks(): Observable<Book[]> {

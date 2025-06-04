@@ -34,7 +34,10 @@ const routes: Routes = [
     path: 'book-detail/:id',
     loadComponent: () => import('../book-detail/book-detail.page').then(m => m.BookDetailPage)
   },
-
+  {
+    path: 'read-book/:id',
+    loadComponent: () => import('../pages/reader/reader.page').then(m => m.ReaderPage)
+  },
   {
     path: '',
     redirectTo: '/tabs/tab1',

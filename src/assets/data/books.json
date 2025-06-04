@@ -8,7 +8,79 @@
       "age": "+4 años",
       "theme": "Clásicos",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
-      "category": "Clásicos"
+      "category": "Clásicos",
+      "pages": [
+        {
+          "id": 1,
+          "text": "En una casita del bosque vivía una niña que siempre usaba una capuchita de color rojo. Por eso le decían Caperucita Roja.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/1.png"
+        },
+        {
+          "id": 2,
+          "text": "Caperucita Roja era muy feliz. Vivía con su mamá y le encantaba jugar con las ardillas, las mariposas y los pajaritos.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/2.png"
+        },
+        {
+          "id": 3,
+          "text": "Un día, mientras Caperucita jugaba, su mamá la llamó y le contó que su abuelita estaba enferma. —¿Por qué no le llevas pastel, frutas y miel?",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/3.png"
+        },
+        {
+          "id": 4,
+          "text": "Caperucita quería mucho a su abuelita, así que aceptó feliz. Antes de salir, su mamá le dijo: —No te distraigas jugando, porque el lobo anda rondando.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/4.png"
+        },
+        {
+          "id": 5,
+          "text": "Caperucita se fue por el camino, pensando en su abuelita y cantando: —Voy con mi canasta llena, para mi abuelita buena.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/5.png"
+        },
+        {
+          "id": 6,
+          "text": "Pero en el camino observó una pradera que estaba llena de lindas flores. —¡Qué flores tan bonitas! Se las llevaré a mi abuelita.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/6.png"
+        },
+        {
+          "id": 7,
+          "text": "De pronto, un lobo se apareció. —¿Adónde vas tan solita, linda Caperucita? —Voy a casa de mi abuelita a llevarle frutas y miel, y un poquito de pastel —contestó la niña.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/7.png"
+        },
+        {
+          "id": 8,
+          "text": "—Yo conozco un buen atajo para llegar sin trabajo— le dijo el lobo, y le señaló un camino. A Caperucita no le pareció tan corto, porque tuvo que caminar mucho rato.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/8.png"
+        },
+        {
+          "id": 9,
+          "text": "Cuando por fin llegó, llamó a la puerta. —¿Eres Caperucita? Pasa, hijita —le contestó su abuelita con una voz muy rara. El lobo había tomado un atajo, había encerrado a la abuelita en el armario y se había disfrazado como ella.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/8_1.png"
+        },
+        {
+          "id": 10,
+          "text": "Caperucita se acercó para darle las flores y el pastel, con las frutas y la miel. —Abuelita, abuelita, ¿por qué tienes los ojos tan grandes? —le preguntó. —¡Para verte mejooooor! —le contestó el malvado lobo.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/10.png"
+        },
+        {
+          "id": 11,
+          "text": "—¿Pero por qué tienes las orejas tan grandes? —¡Para oírte mejooooor! —¿Y por qué tienes la nariz tan grande? —¡Para olerte mejooooor!",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/11.png"
+        },
+        {
+          "id": 12,
+          "text": "Entonces, Caperucita le preguntó: —¿Pero por qué tienes la boca tan grande? —¡Para comerte mejooooor! —gritó el lobo, y se abalanzó sobre ella sin darle tiempo ni de gritar.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/12.png"
+        },
+        {
+          "id": 13,
+          "text": "Luego de comerse a Caperucita, el lobo se echó a dormir una siesta. Felizmente un cazador que pasaba por ahí escuchó los gritos de la abuelita.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/13.png"
+        },
+        {
+          "id": 14,
+          "text": "El cazador abrió la barriga del lobo para rescatar a Caperucita. Luego se la rellenó con piedras y echó al lobo fuera de la casa. Y al final los tres se sentaron en la mesa para comer pastel, frutas y miel.",
+          "imageUrl": "https://raw.githubusercontent.com/Laulin202/read-ma-voice/refs/heads/main/resources/Caperucita/14.png"
+        }
+      ]
     },
     {
       "id": 2,
@@ -18,7 +90,8 @@
       "age": "+3 años",
       "theme": "Clásicos",
       "description": "La historia de tres cerditos y el lobo feroz.",
-      "category": "Clásicos"
+      "category": "Clásicos",
+      "pages": []
     },
     {
       "id": 3,
@@ -28,7 +101,8 @@
       "age": "+4 años",
       "theme": "Clásicos",
       "description": "La princesa más bella del reino.",
-      "category": "Clásicos"
+      "category": "Clásicos",
+      "pages": []
     },
     {
       "id": 4,
@@ -38,7 +112,8 @@
       "age": "+3 años",
       "theme": "Aventura",
       "description": "Un patito diferente encuentra su lugar.",
-      "category": "Aventura"
+      "category": "Aventura",
+      "pages": []
     },
     {
       "id": 5,
@@ -48,7 +123,8 @@
       "age": "+3 años",
       "theme": "Clásicos",
       "description": "Pinocho quiere ser un niño de verdad.",
-      "category": "Clásicos"
+      "category": "Clásicos",
+      "pages": []
     }
   ]
 }

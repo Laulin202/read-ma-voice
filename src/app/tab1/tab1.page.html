@@ -1,6 +1,6 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar color="primary">
-    <ion-title >
+    <ion-title>
       Inicio
     </ion-title>
   </ion-toolbar>
@@ -16,47 +16,17 @@
   </ion-list-header>
 
   <swiper-container [options]="slideOpts" class="book-slides">
-    <swiper-slide>
-      <swiper-slide>
-        <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="Caperucita Roja" 
-          icon="logo-ionic"
-          age="+4 años" 
-          theme="Clásicos"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
-      </swiper-slide>
-
-    </swiper-slide>
-    <swiper-slide>
-      <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="Patito feo" 
-          icon="logo-ionic"
-          age="+3 años" 
-          theme="Infantil"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
-    </swiper-slide>
-    <swiper-slide>
-      <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="los 3 cerditos" 
-          icon="logo-ionic"
-          age="+4 años" 
-          theme="Infantil"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
-    </swiper-slide>
-    <swiper-slide>
-      <ion-card>
-        <img src="https://images.pexels.com/photos/1319854/pexels-photo-1319854.jpeg" alt="Cenicienta" />
-        <ion-card-header>
-          <ion-card-title>Cenicienta</ion-card-title>
-          <ion-card-subtitle>Cuento de hadas</ion-card-subtitle>
-        </ion-card-header>
-      </ion-card>
+    <swiper-slide *ngFor="let book of recentBooks; trackBy: trackByBookId">
+      <app-book-card
+        [id]="book.id"
+        [imageSrc]="book.imageSrc"
+        [title]="book.title"
+        [icon]="book.icon"
+        [age]="book.age"
+        [theme]="book.theme"
+        [description]="book.description"
+        (click)="onBookClick(book)">
+      </app-book-card>
     </swiper-slide>
   </swiper-container>
 
@@ -65,35 +35,17 @@
   </ion-list-header>
 
   <swiper-container [options]="slideOpts" class="book-slides">
-    <swiper-slide>
-      <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="Patito feo" 
-          icon="logo-ionic"
-          age="+3 años" 
-          theme="Infantil"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
-    </swiper-slide>
-    <swiper-slide>
-      <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="Patito feo" 
-          icon="logo-ionic"
-          age="+3 años" 
-          theme="Infantil"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
-    </swiper-slide>
-    <swiper-slide>
-      <app-book-card 
-          imageSrc="https://images.pexels.com/photos/5490778/pexels-photo-5490778.jpeg"
-          title="Patito feo" 
-          icon="logo-ionic"
-          age="+3 años" 
-          theme="Infantil"
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">
-        </app-book-card>
+    <swiper-slide *ngFor="let book of recommendedBooks; trackBy: trackByBookId">
+      <app-book-card
+        [id]="book.id"
+        [imageSrc]="book.imageSrc"
+        [title]="book.title"
+        [icon]="book.icon"
+        [age]="book.age"
+        [theme]="book.theme"
+        [description]="book.description"
+        (click)="onBookClick(book)">
+      </app-book-card>
     </swiper-slide>
   </swiper-container>
 </ion-content>

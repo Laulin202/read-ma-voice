@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [IonicModule, CommonModule, FormsModule, BookCardComponent, BookListComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 

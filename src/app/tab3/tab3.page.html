@@ -7,21 +7,21 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-
   <div class="main-heading">
     Mis Cuentos
   </div>
 
   <div class="card-grid">
     <app-book-card
-      *ngFor="let cuento of cuentos"
-      [title]="cuento.title"
-      [description]="cuento.description"
-      [imageSrc]="cuento.imageSrc"
-      [icon]="cuento.icon"
-      [age]="cuento.age"
-      [theme]="cuento.theme">
+      *ngFor="let book of books; trackBy: trackByBookId"
+      [id]="book.id"
+      [title]="book.title"
+      [description]="book.description"
+      [imageSrc]="book.imageSrc"
+      [icon]="book.icon"
+      [age]="book.age"
+      [theme]="book.theme"
+      (click)="onBookClick(book)">
     </app-book-card>
   </div>
-
 </ion-content>
